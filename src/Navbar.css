@@ -1,0 +1,192 @@
+/* Navbar.css */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(22, 21, 21, 0.8); /* Add opacity here */
+  color: #fff;
+  height: 71.22px;
+  padding: 5px;
+  z-index: 100; 
+  backdrop-filter: blur(10px);
+  border-bottom:0.1px solid rgb(74, 73, 73);
+}
+.logo {
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  margin: 0 12px 0 0;
+}
+.image1{
+  width: 160px;
+  height: 30px;
+}
+.image2{
+  width: 24px;
+  height: 24px;
+  
+}
+.userimage{
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background-color: red;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: flex-end;
+  margin: 0;
+  padding: 0;
+  gap: 12px;
+  width: 200px;
+}
+.nav-links a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff; /* Default text color */
+  transition: color 0.3s, cursor 0.3s; /* Add smooth transitions for color and cursor */
+}
+
+.nav-links a:hover {
+  color: rgb(37, 209, 218); /* Text color on hover */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.nav-links li {
+  margin-right: 20px; 
+  color: white;/* Adjust spacing between navigation links */
+}
+/* searchbar */
+.search-bar {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar input[type="text"] {
+  padding: 0 60px 0 24px;
+  width: 200px;
+  height: 40px;
+  font-size: 15px;
+  margin-left: 780px;
+  margin-right: -60px;
+  border-radius: 140px; 
+  background-color: whitesmoke;
+}
+
+/* usericon */
+
+.user-menu {
+  display: flex;
+  align-items: center;
+}
+
+.user-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #fff; /* Customize the dropdown background color */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add shadow to the dropdown */
+  padding: 10px;
+}
+
+.user-menu:hover .user-dropdown {
+  display: block;
+}
+.user-icon{
+  border: 2px solid black;
+  box-shadow: none;
+  background-color: #ffffff26;
+  width: 39.2px;
+  height: 39.2px;
+  align-items: center;
+  border-radius: 40px;
+  justify-content: center;
+  display: flex;
+  backdrop-filter: blur(10px);
+  margin-right: 10px;
+}
+
+/* Style for the dropdown menu */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  width: 300px;
+  height: 50px;
+  border-radius: 8px;
+  background-color: #161515; /* Background color for the dropdown */
+  min-width: 160px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #fff;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s; /* Smooth background color transition on hover */
+}
+
+.dropdown-content a:hover {
+  background-color: rgb(37, 209, 218); /* Background color on hover */
+  color: #161515; /* Text color on hover */
+}
+
+.dropdown:hover .dropdown-content {
+  display: block; /* Show the dropdown menu on hover */
+}
+
+
+
+/* responsive for mobile view */
+
+@media (max-width: 768px) {
+  .navbar {
+    height: auto; /* Adjust the height for mobile */
+    flex-direction: column; /* Stack elements vertically */
+  }
+
+  .logo {
+    padding-left: 0; /* Remove left padding for logo */
+    margin: 12px 0; /* Adjust margin for logo */
+  }
+
+  .search-bar {
+    margin-left: 0; /* Remove left margin for search bar */
+  }
+
+  .search-bar input[type="text"] {
+    margin: 12px 0; /* Adjust margin for search input */
+  }
+
+  .nav-links {
+    flex-direction: column; /* Stack links vertically */
+    width: auto; /* Allow links to expand horizontally */
+    margin-top: 12px; /* Add top margin for links */
+  }
+
+  .nav-links a {
+    font-size: 16px; /* Reduce font size for mobile */
+    font-weight: normal; /* Reset font weight for mobile */
+  }
+
+  .user-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: red;
+    margin: 12px 0; /* Adjust margin for user icon */
+  }
+}
